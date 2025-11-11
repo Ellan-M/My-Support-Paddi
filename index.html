@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Support Paddi — Customer Support for SMEs</title>
+  <meta name="description" content="My Support Paddi — WhatsApp & Instagram DM support, chatbots and order fulfilment for Nigerian small businesses." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+
+  <!-- NAV -->
+  <nav class="container">
+    <div class="brand">
+      <img src="/assets/MSP Logo.png" alt="My Support Paddi Logo" class="logo" />
+      <div>
+        <h1>My Support Paddi</h1>
+        <div class="tagline">24/7 active and affordable customer support for Nigerian SMEs</div>
+      </div>
+    </div>
+
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-primary" href="#contact">Get Started</a>
+    </div>
+
+    <button class="hamburger" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke="#556B2F" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </nav>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="eyebrow">We handle your messages</span>
+        <h2>Never miss an order. Never lose a customer.</h2>
+        <p>My Support Paddi manages WhatsApp and Instagram DMs, automates FAQs with chatbots, and takes care of order fulfilment — so business owners can focus on growth.
+           My support paddi can also fill in when business owners are short staffed
+        </p>
+
+        <div class="actions">
+          <button class="btn-primary" id="openModalBtn">Book free 15-min consult</button>
+          <a class="btn-ghost" href="#pricing">See packages</a>
+        </div>
+      </div>
+      <aside class="side-panel card">
+        <h3>Starter Offer</h3>
+        <p class="muted">Launch package for micro-sellers: set up WhatsApp bot, quick replies, and 2-week support trial.</p>
+        <ul>
+          <li>WhatsApp Business setup</li>
+          <li>Quick replies & labels</li>
+          <li>Weekly report</li>
+        </ul>
+        <a class="btn-primary" href="#contact">Start trial</a>
+      </aside>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>What we offer</h2>
+      <div class="services">
+        <div class="service">
+          <h3>WhatsApp Support</h3>
+          <p>Shared inbox using official WhatsApp API (WATI / 360Dialog). Auto replies, chat labels, order confirmations.</p>
+        </div>
+        <div class="service">
+          <h3>Instagram DM Support</h3>
+          <p>Connect via Meta Business Suite or inbox tool. Auto replies, saved responses, and story reply handling.</p>
+        </div>
+        <div class="service">
+          <h3>Chatbot + Escalation</h3>
+          <p>Bot handles FAQs and order flows; complex issues are escalated to human agents for quick resolution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <div class="price card">
+          <h3>Starter</h3>
+          <div class="amount">₦50,000 / month</div>
+          <ul>
+            <li>WhatsApp Business setup</li>
+            <li>Auto replies & labels</li>
+            <li>Up to 300 messages</li>
+          </ul>
+          <button class="btn-primary" onclick="openContactWith('Starter')">Choose Starter</button>
+        </div>
+        <div class="price card">
+          <h3>Standard</h3>
+          <div class="amount">₦100,000 / month</div>
+          <ul>
+            <li>WhatsApp + Instagram DMs</li>
+            <li>Chatbot + FAQs</li>
+            <li>Up to 1,000 messages</li>
+          </ul>
+          <button class="btn-primary" onclick="openContactWith('Standard')">Choose Standard</button>
+        </div>
+        <div class="price card">
+          <h3>Premium</h3>
+          <div class="amount">₦200,000 / month</div>
+          <ul>
+            <li>Multichannel support</li>
+            <li>Dedicated agent</li>
+            <li>Up to 3,000 messages</li>
+          </ul>
+          <button class="btn-primary" onclick="openContactWith('Premium')">Choose Premium</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact & Start</h2>
+      <div class="card">
+        <form id="contactForm">
+          <label>Name</label>
+          <input id="name" type="text" required placeholder="Your name" />
+          
+          <label>Email</label>
+          <input id="email" type="email" required placeholder="you@example.com" />
+          
+          <label>Phone</label>
+          <input id="phone" type="text" required placeholder="+234 800 000 0000" />
+          
+          <label>Package</label>
+          <select id="package">
+            <option>Starter</option>
+            <option>Standard</option>
+            <option>Premium</option>
+          </select>
+          
+          <label>Message</label>
+          <textarea id="message" placeholder="Tell us about your business"></textarea>
+          
+          <button class="btn-primary" type="submit">Send Enquiry</button>
+          <div id="formMsg"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 My Support Paddi — Built for Nigerian SMEs</p>
+    </footer>
+  </main>
+
+  <!-- WhatsApp Button -->
+  <a class="wa-btn" href="https://wa.me/message/LCUTYL7ZHCN3D1" target="_blank">
+    💬 Chat on WhatsApp
+  </a>
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div class="modal">
+      <h4>Book a free 15-min consult</h4>
+      <form id="modalForm">
+        <label>Name</label>
+        <input id="mname" required />
+        
+        <label>WhatsApp Number</label>
+        <input id="mphone" required placeholder="+23480..." />
+        
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost" id="closeModalBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Request</button>
+        </div>
+        <div id="modalMsg"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
